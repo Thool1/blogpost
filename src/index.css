@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+.noto-sans {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.noto-serif {
+    font-family: 'Noto Serif', serif;
+}
+
+.scrollbar-hide {
+    scrollbar-width: none;
+}
+
+.active {
+    @apply text-[#ff5722] border-[#ff5722];
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px #000;
+}
+
+.first-cap::first-letter {
+    text-transform: uppercase;
+}
+
+/* .line-clamp-2 { */
+    /* display: -webkit-box; */
+    /* -webkit-line-clamp: 2; */
+    /* show only 2 lines */
+    /* -webkit-box-orient: vertical; */
+    /* overflow: hidden; */
+/* } */
