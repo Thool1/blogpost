@@ -58,7 +58,7 @@ export default function AllStories({ newsData }) {
         } else {
           return (
             <Link
-              // to={`/article/${news._id}`}
+              to={`/article/${news._id}`}
               key={news._id}
               className="flex border-b py-5 border-[#d4d4d4]"
             >
