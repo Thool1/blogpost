@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import EditorsPickIcon from "./assets/EditorsPick.svg";
-
+import { formatDistanceToNow, parseISO } from "date-fns";
 export default function EditorsPick() {
   const [productsList, setProducts] = useState([]);
   useEffect(() => {
@@ -11,6 +11,13 @@ export default function EditorsPick() {
         setProducts(data);
       });
   }, []);
+
+
+  function TimeAgo({ date }) {
+    const timeAgo = formatDistanceToNow(parseISO(date), { addSuffix: true });
+
+    return <span>{timeAgo}</span>;
+  }
 
   return (
     <>
@@ -50,7 +57,8 @@ export default function EditorsPick() {
                             {product.title}
                           </h1>
                           <h1 className="font-sans text-xs font-medium text-black/70 mt-0.5">
-                            {new Date().toLocaleString()}
+                            {/* {new Date().toLocaleString()} */}
+                            <TimeAgo date="2025-07-20T08:45:00.000Z" />
                           </h1>
                         </div>
                       </div>
