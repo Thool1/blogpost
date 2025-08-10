@@ -73,7 +73,11 @@ export default function Trending() {
         </ol>
 
         <div className="">
-          <Link className="text-[#FF5722] flex items-center justify-between  font-sans pl-12 p-4 -mb-[3px]   hover:bg-[#f9fafbc2]">
+          <Link
+            // to={`/article/${news._id}`}
+            to={`/trending`}
+            className="text-[#FF5722] flex items-center justify-between  font-sans pl-12 p-4 -mb-[3px]   hover:bg-[#f9fafbc2]"
+          >
             See all from Trending
             <span className="material-symbols-outlined">chevron_right</span>
           </Link>

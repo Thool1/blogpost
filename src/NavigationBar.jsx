@@ -24,7 +24,7 @@ export default function NavigationBar() {
             <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
-                to="/a"
+                to="/sports"
               >
                 Sports
               </NavLink>
@@ -32,9 +32,9 @@ export default function NavigationBar() {
             <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
-                to="/b"
+                to="/entertainment"
               >
-                The India Fix
+                Entertainment
               </NavLink>
             </li>
             <li>
@@ -64,7 +64,7 @@ export default function NavigationBar() {
             <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
-                to="/f"
+                to="/magazine"
               >
                 Magazine
               </NavLink>
@@ -80,7 +80,7 @@ export default function NavigationBar() {
             <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
-                to="/h"
+                to="/trending"
               >
                 Trending
               </NavLink>

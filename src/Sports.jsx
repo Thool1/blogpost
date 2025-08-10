@@ -73,7 +73,9 @@ export default function Sports() {
         </ol>
 
         <div className="">
-          <Link className="text-[#FF5722] flex items-center justify-between  font-sans pl-12 p-4 -mb-[3px]   hover:bg-[#f9fafbc2]">
+          <Link 
+          to={'/sports'}
+          className="text-[#FF5722] flex items-center justify-between  font-sans pl-12 p-4 -mb-[3px]   hover:bg-[#f9fafbc2]">
             See all from Sports
             <span className="material-symbols-outlined">chevron_right</span>
           </Link>
