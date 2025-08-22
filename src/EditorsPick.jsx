@@ -5,7 +5,8 @@ import { formatDistanceToNow, parseISO } from "date-fns";
 export default function EditorsPick() {
   const [productsList, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://freshapi.up.railway.app/editors-pick")
+    // fetch("https://freshapi.up.railway.app/editors-pick")
+    fetch("https://freshapi-udny.onrender.com/editors-pick")
       .then((res) => res.json())
       .then(({ data }) => {
         setProducts(data);

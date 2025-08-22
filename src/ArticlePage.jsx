@@ -7,7 +7,8 @@ export default function ArticlePage() {
   const { id } = useParams();
 //   console.log(article);
   useEffect(() => {
-    fetch("https://freshapi.up.railway.app/articles")
+    // fetch("https://freshapi.up.railway.app/articles")
+    fetch("https://freshapi-udny.onrender.com/articles")
       .then((res) => res.json())
       .then((news) => {
         const newsArray = Object.entries(news)[0][1];

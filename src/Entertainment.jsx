@@ -7,7 +7,8 @@ export default function Entertainment() {
   const [firstNews, setFirstNews] = useState({});
   const [remainingNews, setRemainingNews] = useState([]);
   useEffect(() => {
-    fetch("https://freshapi.up.railway.app/entertainment")
+    // fetch("https://freshapi.up.railway.app/entertainment")
+    fetch("https://freshapi-udny.onrender.com/entertainment")
       .then((res) => res.json())
       .then(({ data }) => {
         setData(data);

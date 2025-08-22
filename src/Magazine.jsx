@@ -7,7 +7,8 @@ export default function Magazine() {
   const [firstNews, setFirstNews] = useState({});
   const [remainingNews, setRemainingNews] = useState([]);
   useEffect(() => {
-    fetch("https://freshapi.up.railway.app/magazine")
+    // fetch("https://freshapi.up.railway.app/magazine")
+    fetch("https://freshapi-udny.onrender.com/magazine")
       .then((res) => res.json())
       .then(({ data }) => {
         setData(data);

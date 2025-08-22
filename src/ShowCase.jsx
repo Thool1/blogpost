@@ -4,7 +4,8 @@ import ShowCaseIcon from "./assets/ShowCaseIcon.svg";
 export default function ShowCase() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://freshapi.up.railway.app/bestof")
+    // fetch("https://freshapi.up.railway.app/bestof")
+    fetch("https://freshapi-udny.onrender.com/bestof")
       .then((res) => res.json())
       .then(({ data }) => {
         setProducts(data);

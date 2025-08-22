@@ -15,7 +15,8 @@ export default function HomePage() {
   const [newsData, setNewsData] = useState([]);
   const [validNews, setValidNews] = useState();
   useEffect(() => {
-    fetch("https://freshapi.up.railway.app/articles")
+    // fetch("https://freshapi.up.railway.app/articles")
+    fetch("https://freshapi-udny.onrender.com/articles")
       .then((res) => res.json())
       .then((data) => setNewsData(data.data));
   }, []);

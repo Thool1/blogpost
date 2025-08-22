@@ -7,7 +7,8 @@ export default function Trending() {
   const [firstNews, setFirstNews] = useState({});
   const [remainingNews, setRemainingNews] = useState([]);
   useEffect(() => {
-    fetch("https://freshapi.up.railway.app/trending")
+    // fetch("https://freshapi.up.railway.app/trending")
+    fetch("https://freshapi-udny.onrender.com/trending")
       .then((res) => res.json())
       .then(({ data }) => {
         setData(data);
