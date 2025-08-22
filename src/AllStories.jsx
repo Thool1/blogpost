@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Trending from "./Trending";
@@ -19,6 +20,7 @@ export default function AllStories({ newsData }) {
   return (
     <div>
       {newsData.map((news, index) => {
+        // console.log(news)
         if (windowWidth <= 671) {
           if (index === 3) {
             return <Trending key={news._id} />;
@@ -75,7 +77,8 @@ export default function AllStories({ newsData }) {
                   {news.content}
                 </h5>
                 <h5 className="mt-4 font-sans text-[rgba(0,0,0,0.6)] text-xs font-medium">
-                  {news.author.name}
+                  {console.log(news.author.name)}
+                  {/* {news.author.name} */}
                 </h5>
               </div>
             </Link>
