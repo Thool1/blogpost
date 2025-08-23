@@ -48,7 +48,7 @@ export default function ArticlePage() {
 
           <div className="mb-5 mt-5 flex justify-between">
             <a href="#" className="noto-sans font-bold">
-              {article.author.name}
+              {/* {article.author.name} */}
             </a>
             <span>{article.publishedAt}</span>
           </div>

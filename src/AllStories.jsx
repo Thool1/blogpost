@@ -77,7 +77,7 @@ export default function AllStories({ newsData }) {
                   {news.content}
                 </h5>
                 <h5 className="mt-4 font-sans text-[rgba(0,0,0,0.6)] text-xs font-medium">
-                  {console.log(news.author.name)}
+                  {/* {console.log(news.author.name)} */}
                   {/* {news.author.name} */}
                 </h5>
               </div>
