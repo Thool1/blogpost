@@ -7,7 +7,8 @@ export default function Sports() {
   const [firstNews, setFirstNews] = useState({});
   const [remainingNews, setRemainingNews] = useState([]);
   useEffect(() => {
-    fetch("https://freshapi.up.railway.app/sports")
+    // fetch("https://freshapi.up.railway.app/sports")
+    fetch("https://freshapi-udny.onrender.com/sports")
       .then((res) => res.json())
       .then(({ data }) => {
         setData(data);
