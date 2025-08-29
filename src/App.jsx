@@ -4,6 +4,8 @@ import ArticlePage from "./ArticlePage";
 // import FinancePage from "./FinancePage";
 // import Finance from "./Finance";
 import HomePage from "./HomePage";
+import SportsPage from "./SportsPage";
+import EntertainmentPage from "./EntertainmentPage";
 
 function App() {
   return (
@@ -16,7 +18,8 @@ function App() {
         >
           <Routes>
             <Route path="/" element={<HomePage />} />
-            {/* <Route path="/finance" element={<Finance />} /> */}
+            <Route path="/sports" element={<SportsPage />} />
+            <Route path="/entertainment" element={<EntertainmentPage />} />
             <Route path="/article/:id" element={<ArticlePage />} />
             {/* <Route path="/finance/:id" element={<FinancePage />} /> */}
           </Routes>
