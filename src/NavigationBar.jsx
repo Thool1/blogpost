@@ -36,63 +36,63 @@ export default function NavigationBar() {
               >
                 Entertainment
               </NavLink>
-            </li>
-            <li>
+            </li>   
+            {/* <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
                 to="/c"
               >
                 Eco India
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
                 to="/d"
               >
                 The Latest
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
                 to="/e"
               >
                 The Reel
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
                 to="/magazine"
               >
                 Magazine
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
                 to="/g"
               >
                 Video
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
                 to="/trending"
               >
                 Trending
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
                 to="/i"
               >
                 Sections
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>

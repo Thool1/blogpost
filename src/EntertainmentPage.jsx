@@ -16,7 +16,7 @@ export default function EntertainmentPage() {
   const [validNews, setValidNews] = useState();
   useEffect(() => {
     // fetch("https://freshapi.up.railway.app/articles")
-    fetch("https://freshapi-udny.onrender.com/articles")
+    fetch("https://freshapi-udny.onrender.com/entertainment")
       .then((res) => res.json())
       .then((data) => setNewsData(data.data));
   }, []);
@@ -50,15 +50,15 @@ export default function EntertainmentPage() {
     <div className="relative">
       <div className="flex gap-5 max-w-7xl mx-auto max-[671px]:flex-col">
         <div className="w-[730px] max-w-[730px] max-[671px]:w-full">
-          {validNews && <CoverStory validNews={validNews} />}
+          {/* {validNews && <CoverStory validNews={validNews} />} */}
         </div>
         <div className="w-[524px] max-w-[524px] max-[671px]:w-full max-[671px]:max-w-full ">
-          {<EditorsPick />}
+          {/* {<EditorsPick />} */}
           {/* {<Weather />} */}
         </div>
       </div>
       <div>
-        {<ShowCase />}
+        {/* {<ShowCase />} */}
       </div>
       <div className="max-w-7xl mx-auto  ">
         <div className="border-b border-[#d4d4d4] pb-4">
