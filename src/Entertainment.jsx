@@ -44,7 +44,7 @@ export default function Entertainment() {
           </div>
           <Link to={`/article/${firstNews._id}`}>
             <ol className="list-decimal list-outside mb-5">
-              <li className=" text-lg  font-medium">{firstNews.title}</li>
+              <li className=" text-lg  font-medium pl-4">{firstNews.title}</li>
               <p className="pl-4 text-[#676767] font-sans mt-1">
                 Yesterday • 05:30 pm
               </p>

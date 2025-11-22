@@ -13,6 +13,58 @@ export default function EditorsPick() {
       });
   }, []);
 
+    // i dont know how to do this
+  function toIST(dateString) {
+    const date = new Date(dateString);
+    return new Date(date.getTime() + (5.5 * 60 * 60 * 1000));
+  }
+
+
+  function formatDate(dateString) {
+  const istDate = toIST(dateString);
+
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const yesterday = new Date(today);
+  yesterday.setDate(today.getDate() - 1);
+
+  const target = new Date(
+    istDate.getFullYear(),
+    istDate.getMonth(),
+    istDate.getDate()
+  );
+
+  // If today
+  if (target.getTime() === today.getTime()) {
+    return `Today · ${istDate.toLocaleTimeString('en-IN', {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true
+    })}`;
+  }
+
+  // If yesterday
+  if (target.getTime() === yesterday.getTime()) {
+    return `Yesterday · ${istDate.toLocaleTimeString('en-IN', {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true
+    })}`;
+  }
+
+  // Otherwise: 21 Nov 2025 · 05:30 am
+  return `${istDate.toLocaleDateString('en-IN', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric'
+  })} · ${istDate.toLocaleTimeString('en-IN', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  })}`;
+}
+
+
 
   function TimeAgo({ date }) {
     const timeAgo = formatDistanceToNow(parseISO(date), { addSuffix: true });
@@ -58,8 +110,7 @@ export default function EditorsPick() {
                             {product.title}
                           </h1>
                           <h1 className="font-sans text-xs font-medium text-black/70 mt-0.5">
-                            {/* {new Date().toLocaleString()} */}
-                            <TimeAgo date="2025-07-20T08:45:00.000Z" />
+                            {formatDate(product.publishedAt)}
                           </h1>
                         </div>
                       </div>

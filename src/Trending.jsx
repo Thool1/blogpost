@@ -15,6 +15,58 @@ export default function Trending() {
       });
   }, []);
 
+  // i dont know how to do this
+  function toIST(dateString) {
+    const date = new Date(dateString);
+    return new Date(date.getTime() + (5.5 * 60 * 60 * 1000));
+  }
+
+
+  function formatDate(dateString) {
+  const istDate = toIST(dateString);
+
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const yesterday = new Date(today);
+  yesterday.setDate(today.getDate() - 1);
+
+  const target = new Date(
+    istDate.getFullYear(),
+    istDate.getMonth(),
+    istDate.getDate()
+  );
+
+  // If today
+  if (target.getTime() === today.getTime()) {
+    return `Today · ${istDate.toLocaleTimeString('en-IN', {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true
+    })}`;
+  }
+
+  // If yesterday
+  if (target.getTime() === yesterday.getTime()) {
+    return `Yesterday · ${istDate.toLocaleTimeString('en-IN', {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true
+    })}`;
+  }
+
+  // Otherwise: 21 Nov 2025 · 05:30 am
+  return `${istDate.toLocaleDateString('en-IN', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric'
+  })} · ${istDate.toLocaleTimeString('en-IN', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  })}`;
+}
+
+
   useEffect(() => {
     data.filter((news, index) => {
       if (index === 0) {
@@ -44,9 +96,9 @@ export default function Trending() {
           </div>
           <Link to={`/article/${firstNews._id}`}>
             <ol className="list-decimal list-outside mb-5">
-              <li className=" text-lg  font-medium">{firstNews.title}</li>
+              <li className=" text-lg  font-medium pl-4">{firstNews.title}</li>
               <p className="pl-4 text-[#676767] font-sans mt-1">
-                Yesterday • 05:30 pm
+                {formatDate(firstNews.publishedAt)}
               </p>
             </ol>
           </Link>
@@ -56,20 +108,20 @@ export default function Trending() {
         <ol start="2" className="list-decimal list-outside   ">
           {remainingNews.length > 0
             ? remainingNews.map((news) => {
-                // console.log(news);
-                return (
-                  <Link
-                    to={`/article/${news._id}`}
-                    key={news._id}
-                    className="block border-b border-[#d4d4d4]  h-[98px] pb-[19.3px] pt-[17.3px] pr-[18.3px]  pl-[46px] last:border-b-0"
-                  >
-                    <li className=" pl-[18px] text-sm">{news.title}</li>
-                    <span className="pl-[18px] font-sans text-sm block mt-1 text-[#757575]">
-                      9 hours ago
-                    </span>
-                  </Link>
-                );
-              })
+              // console.log(news);
+              return (
+                <Link
+                  to={`/article/${news._id}`}
+                  key={news._id}
+                  className="block border-b border-[#d4d4d4]  h-[98px] pb-[19.3px] pt-[17.3px] pr-[18.3px]  pl-[46px] last:border-b-0"
+                >
+                  <li className=" pl-[18px] text-sm">{news.title}</li>
+                  <span className="pl-[18px] font-sans text-sm block mt-1 text-[#757575]">
+                   {formatDate(news.publishedAt)}
+                  </span>
+                </Link>
+              );
+            })
             : ""}
         </ol>
 
