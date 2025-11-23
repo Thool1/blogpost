@@ -127,7 +127,7 @@ export default function Trending() {
 
         <div className="">
           <Link
-            // to={`/article/${news._id}`}
+            // to={`/`}
             to={`/trending`}
             className="text-[#FF5722] flex items-center justify-between  font-sans pl-12 p-4 -mb-[3px]   hover:bg-[#f9fafbc2]"
           >

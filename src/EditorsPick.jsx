@@ -78,7 +78,7 @@ export default function EditorsPick() {
         <div className="w-full h-full border-[#D5D5D5] border max-[670px]:border-0 max-[670px]:border-t max-[670px]:rounded-t-none max-[670px]:rounded-b-none   rounded-lg overflow-hidden">
           <div className="flex items-center justify-between p-4">
             <img src={EditorsPickIcon} alt="" />
-            <Link className="p-1 px-3 bg-[#FFE5DB] text-[#FF5722] text-[14px] font-sans rounded-lg">
+            <Link to={`/editors-pick`} className="p-1 px-3 bg-[#FFE5DB] text-[#FF5722] text-[14px] font-sans rounded-lg">
               See All
             </Link>
           </div>

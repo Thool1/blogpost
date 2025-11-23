@@ -6,7 +6,9 @@ import ArticlePage from "./ArticlePage";
 import HomePage from "./HomePage";
 import SportsPage from "./SportsPage";
 import EntertainmentPage from "./EntertainmentPage";
-
+import EditorsPickPage from "./EditorsPickPage";
+import TrendingPage from "./TrendingPage";
+import MagazinePage from "./MagazinePage";
 function App() {
   return (
     <>
@@ -21,7 +23,9 @@ function App() {
             <Route path="/sports" element={<SportsPage />} />
             <Route path="/entertainment" element={<EntertainmentPage />} />
             <Route path="/article/:id" element={<ArticlePage />} />
-            {/* <Route path="/finance/:id" element={<FinancePage />} /> */}
+            <Route path="/editors-pick" element={<EditorsPickPage />} />
+            <Route path="/trending" element={<TrendingPage />} />
+            <Route path="/magazine" element={<MagazinePage />} />
           </Routes>
         </div>
       </div>
