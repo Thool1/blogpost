@@ -37,14 +37,14 @@ export default function NavigationBar() {
                 Entertainment
               </NavLink>
             </li>   
-            {/* <li>
+            <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
                 to="/c"
               >
-                Eco India
+                Admin
               </NavLink>
-            </li> */}
+            </li>
             {/* <li>
               <NavLink
                 className="inline-block py-1 border-b-2 border-transparent  hover:border-b-2 hover:border-[#ff5722] lg:py-4"
